@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head%}
+<title>THIS EDIT PAGE</title>
+{% endblock %}
+
+{% block body%}
+
+<div class="todo-box">
+  <h1>EDIT TODO LIST</h1>
+  <form action="/edit/{{tasks.id}}" method="POST">
+    <input type="text" name="content" id="content" value="{{tasks.content}}"/>
+    <input type="submit" value="edit" id="submit" />
+  </form>
+</div>
+
+{% endblock %}
